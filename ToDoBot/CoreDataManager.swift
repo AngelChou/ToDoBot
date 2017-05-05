@@ -19,15 +19,16 @@ class CoreDataManager: NSObject {
     static func getData(entityName:String, predicate:NSPredicate?=nil) -> [NSManagedObject]{
         
         var resultsManagedObject:[NSManagedObject] = []
-        let managedObject = getManagedObject()
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
-        request.returnsObjectsAsFaults = false
-        
-        if predicate != nil {
-            request.predicate = predicate
-        }
         
         do{
+            let managedObject = getManagedObject()
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            request.returnsObjectsAsFaults = false
+            
+            if predicate != nil {
+                request.predicate = predicate
+            }
+            
             let results = try managedObject.fetch(request)
             resultsManagedObject = results as! [NSManagedObject]
         }
@@ -67,12 +68,34 @@ class CoreDataManager: NSObject {
             try managedObject.save()
         }
         catch{
-            print("save: Error saving")
+            print("there are an error saving data")
         }
     }
     
     static func update(todoItem:ToDos){
+        let managedObject = getManagedObject()
+        do{
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ToDos")
+            request.returnsObjectsAsFaults = false
+            request.predicate = NSPredicate(format: "todoItem=%@ and dueDate=%@", todoItem.todoItem!, todoItem.dueDate!)
+            
+    
+            let results = try managedObject.fetch(request)
+            let resultSet = results as! [ToDos]
+            resultSet[0].complete = todoItem.complete
+            
+        }
+        catch{
+            print("there are an error retrieving data")
+        }
         
+        do{
+            try managedObject.save()
+        }
+        catch{
+            print("there are an error updating data")
+        }
     }
     
 }

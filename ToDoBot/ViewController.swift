@@ -123,7 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 todo.complete = true
             }
             
-//            CoreDataManager.update(todoItem: todo)
+            CoreDataManager.update(todoItem: todo)
         }
         return indexPath
     }
