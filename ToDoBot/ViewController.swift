@@ -109,5 +109,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if tableView == mainTable {
+            let todo = todos[indexPath.row]
+            let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+            if cell.checkbox.text == "✅" {
+                cell.checkbox.text = "☑️"
+                todo.complete = false
+            }
+            else {
+                cell.checkbox.text = "✅"
+                todo.complete = true
+            }
+            
+//            CoreDataManager.update(todoItem: todo)
+        }
+        return indexPath
+    }
 }
 
