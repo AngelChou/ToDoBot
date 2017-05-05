@@ -10,8 +10,10 @@ import UIKit
 
 class AddViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var todoitem: UITextField!
-    @IBOutlet weak var duedatepicker: UIDatePicker!
+    @IBOutlet weak var toDoItem: UITextField!
+    @IBOutlet weak var dueDatePicker: UIDatePicker!
+    var dueDate:Date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +36,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         return false
     }
 
+    @IBAction func datepicker_changed(_ sender: Any) {
+        dueDate = dueDatePicker.date
+    }
     /*
     // MARK: - Navigation
 

@@ -197,6 +197,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueFiveDayCount" destination="dyo-Q5-yEf" id="H42-a2-okO"/>
+                        <outlet property="dueTodayCount" destination="xAW-Zf-sYd" id="FEU-kN-HEy"/>
+                        <outlet property="dueTodayTable" destination="yK8-ma-EHc" id="5MW-Fg-dbi"/>
+                        <outlet property="fiveDayTable" destination="KnF-Iw-LqG" id="aQS-EN-pAC"/>
+                        <outlet property="mainTable" destination="zR0-aT-kaF" id="AIR-3P-ELg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,11 +230,14 @@
                                     <outlet property="delegate" destination="3xM-13-JK7" id="uC1-gU-dVK"/>
                                 </connections>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-xT-ghc">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-xT-ghc">
                                 <rect key="frame" x="0.0" y="142" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="515661284.352009">
                                     <!--2017-05-05 07:14:44 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datepicker_changed:" destination="3xM-13-JK7" eventType="valueChanged" id="RAM-Xc-0ux"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,8 +251,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="duedatepicker" destination="dMA-xT-ghc" id="Ggl-MR-aib"/>
-                        <outlet property="todoitem" destination="e2z-fe-FKf" id="1zj-eD-9Pb"/>
+                        <outlet property="dueDatePicker" destination="dMA-xT-ghc" id="JCW-Fu-yeC"/>
+                        <outlet property="toDoItem" destination="e2z-fe-FKf" id="ZkE-We-TCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqs-ur-5ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

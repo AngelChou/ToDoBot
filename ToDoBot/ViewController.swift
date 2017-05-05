@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var dueTodayTable: UITableView!
+    @IBOutlet weak var fiveDayTable: UITableView!
+    @IBOutlet weak var mainTable: UITableView!
+    @IBOutlet weak var dueTodayCount: UILabel!
+    @IBOutlet weak var dueFiveDayCount: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
