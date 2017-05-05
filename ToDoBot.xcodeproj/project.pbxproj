@@ -13,6 +13,7 @@
 		0B716A481EBC4CCB00E28897 /* ToDoBot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A461EBC4CCB00E28897 /* ToDoBot.xcdatamodeld */; };
 		0B716A4A1EBC4CCB00E28897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B716A491EBC4CCB00E28897 /* Assets.xcassets */; };
 		0B716A4D1EBC4CCB00E28897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B716A4B1EBC4CCB00E28897 /* LaunchScreen.storyboard */; };
+		0B716A551EBC5BDF00E28897 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A541EBC5BDF00E28897 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0B716A491EBC4CCB00E28897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B716A4C1EBC4CCB00E28897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B716A4E1EBC4CCB00E28897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B716A541EBC5BDF00E28897 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0B716A4B1EBC4CCB00E28897 /* LaunchScreen.storyboard */,
 				0B716A4E1EBC4CCB00E28897 /* Info.plist */,
 				0B716A461EBC4CCB00E28897 /* ToDoBot.xcdatamodeld */,
+				0B716A541EBC5BDF00E28897 /* AddViewController.swift */,
 			);
 			path = ToDoBot;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				0B716A421EBC4CCB00E28897 /* ViewController.swift in Sources */,
 				0B716A401EBC4CCB00E28897 /* AppDelegate.swift in Sources */,
+				0B716A551EBC5BDF00E28897 /* AddViewController.swift in Sources */,
 				0B716A481EBC4CCB00E28897 /* ToDoBot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

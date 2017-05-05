@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--To Do Bot-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoBot" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,11 +189,36 @@
                             <constraint firstItem="8pE-Fg-Kqm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t3V-Go-xXY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iVP-kj-9Io"/>
+                    <navigationItem key="navigationItem" title="To Do Bot" id="iVP-kj-9Io">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UB3-fD-cLR">
+                            <color key="tintColor" red="0.53725490196078429" green="0.79607843137254897" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="3xM-13-JK7" kind="show" id="P5d-ME-CQy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="eDQ-bJ-r21">
+            <objects>
+                <viewController id="3xM-13-JK7" customClass="AddViewController" customModule="ToDoBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AK4-9d-Bnd"/>
+                        <viewControllerLayoutGuide type="bottom" id="gy2-gE-Ts1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u66-go-SIl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqs-ur-5ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B9c-WV-svj">
