@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var todoitem: UITextField!
+    @IBOutlet weak var duedatepicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,12 @@ class AddViewController: UIViewController {
     }
     
     func saveButton_click(){
-        
+    
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 
     /*

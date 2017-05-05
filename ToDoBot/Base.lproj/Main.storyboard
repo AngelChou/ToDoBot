@@ -213,8 +213,37 @@
                     <view key="view" contentMode="scaleToFill" id="u66-go-SIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2z-fe-FKf">
+                                <rect key="frame" x="16" y="97" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3xM-13-JK7" id="uC1-gU-dVK"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-xT-ghc">
+                                <rect key="frame" x="0.0" y="142" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="515661284.352009">
+                                    <!--2017-05-05 07:14:44 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="e2z-fe-FKf" secondAttribute="trailing" id="DA8-3w-v89"/>
+                            <constraint firstItem="e2z-fe-FKf" firstAttribute="top" secondItem="AK4-9d-Bnd" secondAttribute="bottom" constant="33" id="Nqs-QH-9nM"/>
+                            <constraint firstItem="e2z-fe-FKf" firstAttribute="leading" secondItem="u66-go-SIl" secondAttribute="leadingMargin" id="Ugj-Bg-m0x"/>
+                            <constraint firstAttribute="trailing" secondItem="dMA-xT-ghc" secondAttribute="trailing" id="fQh-fO-YiW"/>
+                            <constraint firstItem="dMA-xT-ghc" firstAttribute="leading" secondItem="u66-go-SIl" secondAttribute="leading" id="sGU-zc-s5K"/>
+                            <constraint firstItem="dMA-xT-ghc" firstAttribute="top" secondItem="e2z-fe-FKf" secondAttribute="bottom" constant="14.999999999999886" id="seA-MO-wZn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="duedatepicker" destination="dMA-xT-ghc" id="Ggl-MR-aib"/>
+                        <outlet property="todoitem" destination="e2z-fe-FKf" id="1zj-eD-9Pb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqs-ur-5ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
