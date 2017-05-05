@@ -16,8 +16,8 @@
 		0B716A551EBC5BDF00E28897 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A541EBC5BDF00E28897 /* AddViewController.swift */; };
 		0B716A571EBC62A200E28897 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A561EBC62A200E28897 /* TableViewCell.swift */; };
 		0B716A5D1EBC647800E28897 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A5C1EBC647800E28897 /* CoreDataManager.swift */; };
-		0B716A601EBC676000E28897 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A5E1EBC676000E28897 /* ToDoItem.swift */; };
-		0B716A611EBC676000E28897 /* ToDoItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A5F1EBC676000E28897 /* ToDoItem+CoreDataProperties.swift */; };
+		0B716A641EBC7DB800E28897 /* ToDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A621EBC7DB800E28897 /* ToDos.swift */; };
+		0B716A651EBC7DB800E28897 /* ToDos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B716A631EBC7DB800E28897 /* ToDos+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		0B716A541EBC5BDF00E28897 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		0B716A561EBC62A200E28897 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0B716A5C1EBC647800E28897 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		0B716A5E1EBC676000E28897 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		0B716A5F1EBC676000E28897 /* ToDoItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDoItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B716A621EBC7DB800E28897 /* ToDos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDos.swift; sourceTree = "<group>"; };
+		0B716A631EBC7DB800E28897 /* ToDos+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDos+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 		0B716A331EBC4CCB00E28897 = {
 			isa = PBXGroup;
 			children = (
-				0B716A5E1EBC676000E28897 /* ToDoItem.swift */,
-				0B716A5F1EBC676000E28897 /* ToDoItem+CoreDataProperties.swift */,
+				0B716A621EBC7DB800E28897 /* ToDos.swift */,
+				0B716A631EBC7DB800E28897 /* ToDos+CoreDataProperties.swift */,
 				0B716A3E1EBC4CCB00E28897 /* ToDoBot */,
 				0B716A3D1EBC4CCB00E28897 /* Products */,
 			);
@@ -156,12 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B716A571EBC62A200E28897 /* TableViewCell.swift in Sources */,
-				0B716A601EBC676000E28897 /* ToDoItem.swift in Sources */,
 				0B716A421EBC4CCB00E28897 /* ViewController.swift in Sources */,
 				0B716A401EBC4CCB00E28897 /* AppDelegate.swift in Sources */,
-				0B716A611EBC676000E28897 /* ToDoItem+CoreDataProperties.swift in Sources */,
 				0B716A551EBC5BDF00E28897 /* AddViewController.swift in Sources */,
 				0B716A481EBC4CCB00E28897 /* ToDoBot.xcdatamodeld in Sources */,
+				0B716A651EBC7DB800E28897 /* ToDos+CoreDataProperties.swift in Sources */,
+				0B716A641EBC7DB800E28897 /* ToDos.swift in Sources */,
 				0B716A5D1EBC647800E28897 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

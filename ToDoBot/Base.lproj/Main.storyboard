@@ -58,6 +58,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="aRF-u7-4ae"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4cx-hI-N9w"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IVo-As-wfo"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <constraints>
@@ -116,6 +120,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="hmY-ux-Lc2"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2rJ-uZ-gTx"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cJ9-gx-CUd"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <constraints>
@@ -182,6 +190,10 @@
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e7k-5a-JM7"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rpR-A1-5fa"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <constraints>

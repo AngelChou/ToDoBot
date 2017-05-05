@@ -1,5 +1,5 @@
 //
-//  ToDoItem+CoreDataProperties.swift
+//  ToDos+CoreDataProperties.swift
 //  ToDoBot
 //
 //  Created by Shun-Ching, Chou on 2017/5/5.
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension ToDoItem {
+extension ToDos {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ToDoItem> {
-        return NSFetchRequest<ToDoItem>(entityName: "ToDos");
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<ToDos> {
+        return NSFetchRequest<ToDos>(entityName: "ToDos");
     }
 
     @NSManaged public var todoItem: String?

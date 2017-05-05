@@ -34,14 +34,48 @@ class CoreDataManager: NSObject {
         catch{
             print("there are an error retrieving data")
         }
+        print(resultsManagedObject)
         return resultsManagedObject
     }
     
-    static func save(todoItem:String, dueDate:NSDate, complete:Bool){
+    static func deleteData(entityName:String){
         
+        let managedObject = getManagedObject()
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        request.returnsObjectsAsFaults = false
+        
+        do{
+            let results = try managedObject.fetch(request)
+            for result in results {
+                managedObject.delete(result as! NSManagedObject)
+            }
+        }
+        catch{
+            print("there are an error deleting data")
+        }
     }
     
-    static func update(todoItem:ToDoItem){
+    static func save(todoItem:String, dueDate:NSDate, complete:Bool){
+        let managedObject = getManagedObject()
+    
+        print(todoItem)
+        print(dueDate)
+        print(complete)
+        let entity = NSEntityDescription.entity(forEntityName: "ToDos", in: managedObject)
+        let todo = NSManagedObject(entity: entity!, insertInto: managedObject)
+        todo.setValue(todoItem, forKey: "todoItem")
+        todo.setValue(dueDate, forKey: "dueDate")
+        todo.setValue(complete, forKey: "complete")
+        
+        do{
+            try managedObject.save()
+        }
+        catch{
+            print("save: Error saving")
+        }
+    }
+    
+    static func update(todoItem:ToDos){
         
     }
     

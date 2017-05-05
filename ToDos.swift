@@ -1,5 +1,5 @@
 //
-//  ToDoItem+CoreDataClass.swift
+//  ToDos+CoreDataClass.swift
 //  ToDoBot
 //
 //  Created by Shun-Ching, Chou on 2017/5/5.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class ToDoItem: NSManagedObject {
+public class ToDos: NSManagedObject {
 
 }
