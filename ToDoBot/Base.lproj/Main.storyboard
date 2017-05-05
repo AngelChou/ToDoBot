@@ -147,6 +147,41 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zR0-aT-kaF">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="245"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="giL-AM-5Zi" customClass="TableViewCell" customModule="ToDoBot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giL-AM-5Zi" id="HYE-jK-OLO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-8H-fBu">
+                                                                    <rect key="frame" x="8" y="14" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-U4-dEX">
+                                                                    <rect key="frame" x="76" y="14" width="267" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Hyn-U4-dEX" firstAttribute="leading" secondItem="YVG-8H-fBu" secondAttribute="trailing" constant="26" id="ZMp-CC-gCT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Hyn-U4-dEX" secondAttribute="trailing" id="c2I-u4-6Xz"/>
+                                                                <constraint firstItem="YVG-8H-fBu" firstAttribute="top" secondItem="HYE-jK-OLO" secondAttribute="topMargin" constant="6" id="iJv-wo-yjJ"/>
+                                                                <constraint firstItem="YVG-8H-fBu" firstAttribute="leading" secondItem="HYE-jK-OLO" secondAttribute="leadingMargin" id="vFZ-vG-9i2"/>
+                                                                <constraint firstItem="Hyn-U4-dEX" firstAttribute="top" secondItem="HYE-jK-OLO" secondAttribute="top" constant="14" id="xGq-K9-M4H"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="checkbox" destination="YVG-8H-fBu" id="jpO-RH-8Qo"/>
+                                                            <outlet property="todoItem" destination="Hyn-U4-dEX" id="RE0-eK-etT"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                         </subviews>
                                         <constraints>
