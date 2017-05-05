@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dueTodayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         fiveDayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
-        CoreDataManager.self.deleteData(entityName: "ToDos")
+        // CoreDataManager.self.deleteData(entityName: "ToDos")
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +57,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dueTodayTable.reloadData()
         fiveDayTable.reloadData()
         mainTable.reloadData()
-        
+    }
+    
+    func formatDate(date: NSDate) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM/dd"
+        return dateFormatter.string(from: date as Date)
     }
     
 //    //MARK: tableview functions
@@ -84,19 +89,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if tableView == dueTodayTable {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             let todo = todoDueToday[indexPath.row]
-            cell.textLabel!.text = String(format: "%@: %@", todo.todoItem!, todo.dueDate!)
+            cell.textLabel!.text = String(format: "%@: %@", todo.todoItem!, formatDate(date: todo.dueDate!))
             return cell
         }
         else if tableView == fiveDayTable {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             let todo = todoFiveDay[indexPath.row]
-            cell.textLabel!.text = String(format: "%@: %@", todo.todoItem!, todo.dueDate!)
+            cell.textLabel!.text = String(format: "%@: %@", todo.todoItem!, formatDate(date: todo.dueDate!))
             return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             let todo = todos[indexPath.row]
-            cell.todoItem.text = String(format: "%@: %@", todo.todoItem!, todo.dueDate!)
+            cell.todoItem.text = String(format: "%@: %@", todo.todoItem!, formatDate(date: todo.dueDate!))
             cell.checkbox.text = "☑️"
             if todo.complete == true {
                 cell.checkbox.text = "✅"

@@ -34,7 +34,6 @@ class CoreDataManager: NSObject {
         catch{
             print("there are an error retrieving data")
         }
-        print(resultsManagedObject)
         return resultsManagedObject
     }
     
@@ -58,9 +57,6 @@ class CoreDataManager: NSObject {
     static func save(todoItem:String, dueDate:NSDate, complete:Bool){
         let managedObject = getManagedObject()
     
-        print(todoItem)
-        print(dueDate)
-        print(complete)
         let entity = NSEntityDescription.entity(forEntityName: "ToDos", in: managedObject)
         let todo = NSManagedObject(entity: entity!, insertInto: managedObject)
         todo.setValue(todoItem, forKey: "todoItem")
