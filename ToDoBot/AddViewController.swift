@@ -12,7 +12,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var toDoItem: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
-    var dueDate:Date = Date()
+    var dueDate:NSDate = NSDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,13 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
     
     func saveButton_click(){
-    
+        CoreDataManager.save(todoItem: toDoItem.text!, dueDate: dueDate, complete: false)
+        toDoItem.text = ""
+        UIView.transition(with: view, duration: 0.2, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.toDoItem.layer.backgroundColor = UIColor.green.cgColor
+        }, completion: {
+            (value:Bool) in
+        })
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -37,7 +43,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func datepicker_changed(_ sender: Any) {
-        dueDate = dueDatePicker.date
+        dueDate = dueDatePicker.date as NSDate
     }
     /*
     // MARK: - Navigation
